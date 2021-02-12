@@ -171,7 +171,7 @@ def reconstruct(I, Iresized, Yr, lp_threshold):
 
     print(len(final_labels_frontal))
     #assert final_labels_frontal, "No License plate is founded!"
-    if len(final_labels_frontal)<0 :
+    if len(final_labels_frontal) < 1 :
         return 'No License plate is founded!', [],1,[]
     # LP size and type
     out_size, lp_type = (two_lines, 2) if ((final_labels_frontal[0].wh()[0] / final_labels_frontal[0].wh()[1]) < 1.7) else (one_line, 1)
